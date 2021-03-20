@@ -1,0 +1,36 @@
+
+.toDoItem {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    background-color: rgb(86, 86, 211);
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+    font-family: Oswald;
+    margin: 20px;
+}
+
+ul {
+    padding: 0;
+}
+
+button {
+    /* height: 35px; */
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-left: 20px;
+    font-family: Oswald;
+    /* font-size: 20px; */
+    
+}
+
+.toDoItemText {
+    margin: 0;
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(Oswald-Regular.ttf);
+  }

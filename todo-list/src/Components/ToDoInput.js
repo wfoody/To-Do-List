@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import './ToDoInput.css'
 
 const ToDoInput = (props) => {
 
@@ -22,6 +23,7 @@ const ToDoInput = (props) => {
     const handleKeyPress = (e) => {
         if (e.keyCode === 13) {
             props.onAddTodo(todo)
+            setTodo('')
 
         }
       }

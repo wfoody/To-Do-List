@@ -1,14 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './Todos.css'
 
 const Todos = (props) => {
 
     const toDoList = props.todos.map(todo => {
         return (
-            <li key={Math.random()}>
-                {todo}
-                <button onClick={() => props.onDelete(todo)}>Delete</button>
-                </li>
+            <li key={Math.random()} className='toDoItem'>
+                <p className='toDoItemText'>{todo}</p>
+                <button onClick={() => props.onDelete(todo)}>Done</button>
+            </li>
         )
     })
 
@@ -29,7 +30,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-    onDelete: (todo) => dispatch({type: 'DELETE_TODO', value: todo})
+        onDelete: (todo) => dispatch({ type: 'DELETE_TODO', value: todo })
     }
 }
 
